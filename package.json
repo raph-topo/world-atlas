@@ -22,6 +22,9 @@
     "./110/countries": "./build/110m_countries.geojson",
     "./110/land": "./build/110m_land.geojson"
   },
+  "files": [
+    "build"
+  ],
   "devDependencies": {
     "d3-dsv": "^1.0.3",
     "d3-geo-projection": "^2.4.0",
