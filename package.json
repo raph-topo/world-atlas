@@ -16,6 +16,12 @@
   "scripts": {
     "build": "bash run"
   },
+  "exports": {
+    "./50/countries": "./build/50m_countries.geojson",
+    "./50/land": "./build/50m_land.geojson",
+    "./110/countries": "./build/110m_countries.geojson",
+    "./110/land": "./build/110m_land.geojson"
+  },
   "devDependencies": {
     "d3-dsv": "^1.0.3",
     "d3-geo-projection": "^2.4.0",
