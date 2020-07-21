@@ -31,6 +31,7 @@
     "d3-dsv": "^1.0.3",
     "d3-geo-projection": "^2.4.0",
     "ndjson-cli": "^0.3.0",
+    "rimraf": "^3.0.2",
     "rollup": "^2.22.1",
     "shapefile": "^0.6.1",
     "topojson-client": "^3.0.0",
