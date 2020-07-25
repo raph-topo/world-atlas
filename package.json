@@ -28,7 +28,8 @@
     "import": "./dist/index.mjs"
   },
   "files": [
-    "build"
+    "dist",
+    "index.ts"
   ],
   "devDependencies": {
     "@rollup/plugin-sucrase": "^3.1.0",
