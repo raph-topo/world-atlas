@@ -16,11 +16,12 @@
   "scripts": {
     "build": "bash run"
   },
+  "type": "module",
+  "main": "dist/index.cjs",
+  "typings": "dist/index.d.ts",
   "exports": {
-    "./50/countries": "./build/50m_countries.geojson",
-    "./50/land": "./build/50m_land.geojson",
-    "./110/countries": "./build/110m_countries.geojson",
-    "./110/land": "./build/110m_land.geojson"
+    "require": "./dist/index.cjs",
+    "import": "./dist/index.mjs"
   },
   "files": [
     "build"
