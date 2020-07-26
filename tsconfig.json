@@ -1,0 +1,15 @@
+{
+    "files": [
+        "index.ts"
+    ],
+    "compilerOptions": {
+        "moduleResolution": "Node",
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "strict": true,
+        "target": "ESNext",
+        "outDir": "dist",
+        "declaration": true,
+        "emitDeclarationOnly": true
+    }
+}
