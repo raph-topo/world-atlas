@@ -1,6 +1,6 @@
 {
   "name": "visionscarto-world-atlas-esm",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Derived from mbostock's world-atlas: Pre-built TopoJSON from Natural Earth. Now able to be imported as an ES Module",
   "contributors": [
     {
