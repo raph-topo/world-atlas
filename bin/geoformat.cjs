@@ -18,7 +18,7 @@ process.stdin.on('readable', () => {
     json += chunk;
   }
 });
-process.stdin.on('end', () => {
+process.stdin.on('end', () => { 
   console.log(geoformat(commander.precision)(JSON.parse(json)));
 });
 
