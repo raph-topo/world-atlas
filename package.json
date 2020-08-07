@@ -17,9 +17,7 @@
   "license": "BSD-3-Clause",
   "homepage": "https://github.com/raph-topo/visionscarto-world-atlas",
   "keywords": [
-    "topojson",
-    "geojson",
-    "shapefile"
+    "topojson"
   ],
   "repository": {
     "type": "git",
