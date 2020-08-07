@@ -1,7 +1,5 @@
 #!/bin/bash
 
-if [[ -e world ]]; then rm -rvf world; fi
-
 install() {
   npm install -g d3-dsv d3-geo-projection ndjson-cli shapefile topojson@3
 }
