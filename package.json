@@ -19,10 +19,7 @@
   "keywords": [
     "topojson"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/raph-topo/visionscarto-world-atlas.git"
-  },
+  "repository": "git@github.com:raph-topo/visionscarto-world-atlas.git",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
