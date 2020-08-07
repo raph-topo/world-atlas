@@ -14,7 +14,11 @@
     "url": "https://github.com/raph-topo/visionscarto-world-atlas.git"
   },
   "scripts": {
-    "build": "bash run"
+    "world": "rimraf world && bash run",
+    "typings": "tsc",
+    "rollup": "rollup --config",
+    "dist": "rimraf dist && yarn typings && yarn rollup",
+    "prepack": "yarn world && yarn dist"
   },
   "type": "module",
   "main": "dist/index.cjs",
