@@ -23,6 +23,9 @@
     "type": "git",
     "url": "https://github.com/raph-topo/visionscarto-world-atlas.git"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "scripts": {
     "world": "rimraf world && bash bin/world",
     "topojson": "copyfiles world/50m.json world/110m.json dist",
