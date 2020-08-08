@@ -1,5 +1,6 @@
 import sucrase from '@rollup/plugin-sucrase'
 import json from '@rollup/plugin-json'
+import { terser } from 'rollup-plugin-terser'
 import * as pkg from './package.json'
 
 /**
@@ -9,14 +10,16 @@ import * as pkg from './package.json'
  */
 const defaults = {
   input: 'index.ts',
-  output: {
-    banner: `// ${pkg.name} v${pkg.version} Copyright ${(new Date()).getFullYear()} ${pkg.contributors.map(c => `${c.name} <${c.email}>`).join(' & ')} ${pkg.license}`,
-  },
   plugins: [
     json(),
     sucrase({
       exclude: ['node_modules/**'],
       transforms: ['typescript']
+    }),
+    terser({
+      output: {
+        preamble: `// ${pkg.name} v${pkg.version} Copyright ${(new Date()).getFullYear()} ${pkg.contributors.map(c => `${c.name} <${c.email}>`).join(' & ')} ${pkg.license}`
+      }
     })
   ]
 }
