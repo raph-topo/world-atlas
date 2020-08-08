@@ -1,6 +1,6 @@
 {
   "name": "@raph-topo/world-atlas",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Derived from mbostock's world-atlas: Pre-built TopoJSON from Natural Earth. Now able to be imported as an ES Module",
   "contributors": [
     {
