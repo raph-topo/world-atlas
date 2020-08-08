@@ -1,4 +1,5 @@
 import sucrase from '@rollup/plugin-sucrase'
+import json from '@rollup/plugin-json'
 import * as pkg from './package.json'
 
 /**
@@ -12,9 +13,10 @@ const defaults = {
     banner: `// ${pkg.name} v${pkg.version} Copyright ${(new Date()).getFullYear()} ${pkg.contributors.map(c => `${c.name} <${c.email}>`).join(' & ')} ${pkg.license}`,
   },
   plugins: [
+    json(),
     sucrase({
       exclude: ['node_modules/**'],
-      transforms: ['typescript', 'imports']
+      transforms: ['typescript']
     })
   ]
 }
