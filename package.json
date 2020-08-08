@@ -25,10 +25,9 @@
   },
   "scripts": {
     "world": "rimraf world && bash bin/world",
-    "topojson": "copyfiles world/50m.json world/110m.json dist",
     "typings": "tsc",
     "rollup": "rollup --config",
-    "dist": "rimraf dist && yarn topojson && yarn typings && yarn rollup",
+    "dist": "rimraf dist && yarn typings && yarn rollup",
     "prepack": "yarn world && yarn dist"
   },
   "type": "module",
