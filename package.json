@@ -46,7 +46,6 @@
     "@rollup/plugin-sucrase": "^3.1.0",
     "@types/d3": "^5.7.2",
     "@types/topojson-client": "^3.0.0",
-    "copyfiles": "^2.3.0",
     "d3-dsv": "^1.0.3",
     "d3-geo-projection": "^2.4.0",
     "ndjson-cli": "^0.3.0",
