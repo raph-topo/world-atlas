@@ -3,7 +3,7 @@
 rm -rvf *-10m.json *-50m.json *-110m.json
 mkdir -p build
 
-countries_shp() {
+download_countries() {
   if [ ! -f build/ne_$1_admin_0_countries.shp ]; then
     curl -o build/ne_$1_admin_0_countries.zip https://naciscdn.org/naturalearth/$1/cultural/ne_$1_admin_0_countries.zip
     unzip -od build build/ne_$1_admin_0_countries.zip
@@ -11,7 +11,7 @@ countries_shp() {
   fi
 }
 
-land_shp() {
+download_land() {
   if [ ! -f build/ne_$1_land.shp ]; then
     curl -o build/ne_$1_land.zip https://naciscdn.org/naturalearth/$1/physical/ne_$1_land.zip
     unzip -od build build/ne_$1_land.zip
@@ -20,7 +20,7 @@ land_shp() {
 }
 
 countries() {
-  countries_shp $1
+  download_countries $1
   geo2topo -q 1e5 -n countries=<(
     shp2json --encoding utf8 -n build/ne_$1_admin_0_countries.shp |
       ndjson-map 'i = d.properties.ISO_N3, d.id = i === "-99" ? (d.properties.SOV_A3 === "NOR" ? "578" : undefined) : i, d.properties = {name: d.properties.NAME}, d' |
@@ -30,7 +30,7 @@ countries() {
 }
 
 land() {
-  land_shp $1
+  download_land $1
   geo2topo -q 1e5 -n land=<(
     shp2json --encoding utf8 -n build/ne_$1_land.shp |
       ndjson-map 'delete d.properties, d' |
