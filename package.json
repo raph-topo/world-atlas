@@ -17,9 +17,7 @@
     "url": "https://github.com/topojson/world-atlas.git"
   },
   "files": [
-    "*-10m.json",
-    "*-50m.json",
-    "*-110m.json"
+    "topojson"
   ],
   "scripts": {
     "prepublishOnly": "bash prepublish",
